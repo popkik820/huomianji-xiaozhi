@@ -1,0 +1,87 @@
+<h2>小程序首页交互方向</h2>
+<p class="subtitle">请从“每天晚饭前快速用一次”的角度选择。重点看操作路径，不看最终视觉风格。</p>
+
+<div class="cards">
+  <div class="card" data-choice="chat-first" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="width:260px;height:520px;margin:auto;border:1px solid #d8dee8;border-radius:28px;background:#f7faf8;padding:18px;box-sizing:border-box;">
+        <div style="height:28px;font-weight:700;color:#1b2b22;">晚餐杂粮助手</div>
+        <div style="margin-top:18px;background:#fff;border-radius:14px;padding:12px;box-shadow:0 1px 4px #d9e2dc;">
+          今天吃了什么？晚上想做什么面食？
+        </div>
+        <div style="margin-top:14px;margin-left:46px;background:#dff3e7;border-radius:14px;padding:12px;">
+          早上全麦吐司，中午牛肉面，晚上想包 500g 饺子
+        </div>
+        <div style="margin-top:18px;background:#fff;border-radius:14px;padding:12px;box-shadow:0 1px 4px #d9e2dc;">
+          我识别到 2 条饮食记录，先确认一下。
+        </div>
+        <div style="margin-top:14px;border:1px solid #dce6df;border-radius:12px;padding:10px;background:#fff;">
+          早餐 全麦吐司 80g<br>
+          午餐 牛肉面 200g
+        </div>
+        <div style="position:absolute;"></div>
+        <div style="margin-top:32px;display:flex;gap:8px;">
+          <div style="width:34px;height:34px;border-radius:50%;background:#e8eef0;text-align:center;line-height:34px;">🎙</div>
+          <div style="flex:1;border-radius:18px;background:#fff;border:1px solid #d8dee8;padding:8px 12px;color:#748078;">输入今天吃了什么...</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A. 聊天优先</h3>
+      <p>像微信对话一样输入，解析后在聊天流里插入确认卡片和推荐结果。最贴近“和他交互”。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="result-dashboard" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="width:260px;height:520px;margin:auto;border:1px solid #d8dee8;border-radius:28px;background:#fbfbf7;padding:18px;box-sizing:border-box;">
+        <div style="height:28px;font-weight:700;color:#263028;">今晚分配</div>
+        <div style="margin-top:18px;background:#fff;border:1px solid #e2e5dc;border-radius:14px;padding:14px;">
+          <div style="font-size:13px;color:#6d756b;">推荐杂粮粉</div>
+          <div style="font-size:34px;font-weight:800;color:#273c2d;">133g</div>
+          <div style="font-size:12px;color:#6d756b;">面团 500g / 杂粮比例 35%</div>
+        </div>
+        <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <div style="background:#fff;border:1px solid #e2e5dc;border-radius:12px;padding:10px;">普通面粉<br><b>247g</b></div>
+          <div style="background:#fff;border:1px solid #e2e5dc;border-radius:12px;padding:10px;">水<br><b>120g</b></div>
+        </div>
+        <div style="margin-top:18px;background:#fff;border:1px solid #e2e5dc;border-radius:14px;padding:12px;">
+          今日记录<br>
+          早餐 全麦吐司<br>
+          午餐 牛肉面
+        </div>
+        <div style="margin-top:20px;background:#2f6f45;color:white;border-radius:18px;text-align:center;padding:10px;">重新输入今日饮食</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B. 结果面板优先</h3>
+      <p>首页直接展示最新推荐，输入是次级动作。适合反复查看结果，但首次录入不如聊天自然。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="wizard" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="width:260px;height:520px;margin:auto;border:1px solid #d8dee8;border-radius:28px;background:#f8f9fb;padding:18px;box-sizing:border-box;">
+        <div style="height:28px;font-weight:700;color:#263142;">晚餐杂粮计算</div>
+        <div style="margin-top:16px;display:flex;gap:6px;">
+          <div style="flex:1;height:5px;border-radius:4px;background:#2f6f45;"></div>
+          <div style="flex:1;height:5px;border-radius:4px;background:#cfd8d4;"></div>
+          <div style="flex:1;height:5px;border-radius:4px;background:#cfd8d4;"></div>
+        </div>
+        <div style="margin-top:26px;font-size:20px;font-weight:700;">第 1 步</div>
+        <div style="margin-top:6px;color:#687273;">记录今天已吃的主食</div>
+        <div style="margin-top:18px;background:#fff;border:1px solid #dfe5e8;border-radius:12px;padding:12px;height:120px;color:#7b8487;">
+          例如：早上两个包子，中午一碗米饭...
+        </div>
+        <div style="margin-top:18px;background:#fff;border:1px solid #dfe5e8;border-radius:12px;padding:12px;">
+          年龄组 / 食量 / 消化敏感
+        </div>
+        <div style="margin-top:78px;background:#2f6f45;color:white;border-radius:18px;text-align:center;padding:10px;">下一步</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C. 三步向导</h3>
+      <p>按“今日饮食 -> 晚餐目标 -> 推荐结果”推进。最清楚，但交互比较像表单。</p>
+    </div>
+  </div>
+</div>
